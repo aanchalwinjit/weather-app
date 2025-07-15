@@ -186,3 +186,23 @@ $('#historyBtn').click(() => {
     }
   });
 });
+let elementCount = 0;
+
+$('#addElementBtn').click(() => {
+  elementCount++;
+
+  const newElement = $(`
+    <div class="card p-3 mb-3 shadow-sm dynamic-box">
+      <h6>Dynamic Element ${elementCount}</h6>
+      <p class="text-muted mb-2">Climate is what we expect, weather is what we get.</p>
+      <button class="btn btn-danger btn-sm removeBtn">Remove</button>
+    </div>
+  `);
+
+  $('#dynamicContainer').append(newElement);
+});
+
+// Delegate remove event to handle dynamically created buttons
+$('#dynamicContainer').on('click', '.removeBtn', function () {
+  $(this).closest('.dynamic-box').remove();
+});
