@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f4f8fb;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+      border-radius: 12px;
+      border: none;
+    }
+
+    .weather-icon {
+      width: 60px;
+    }
+
+    #history .history-entry {
+      border-left: 4px solid #007bff;
+      background: #ffffff;
+      padding: 12px 20px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    #history .history-entry:hover {
+      background-color: #f1f8ff;
+    }
+
+    .header {
+      background: #007bff;
+    }
+
+    .header h2 {
+      color: #f1f8ff;
+      padding: 15px 10px;
+    }
+
+    #fetchBtn,
+    #saveBtn {
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+    }
+
+    #fetchBtn i,
+    #saveBtn i {
+      font-size: 1rem;
+    }
+
+    .btn+.btn {
+      margin-left: 8px;
+    }
+
+    .custom-weather-card {
+      background-color: #f9f0ee;
+      border-radius: 16px !important;
+      transition: 0.3s;
+    }
+
+    .custom-weather-card:hover {
+      background-color: #e7f0ff;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .custom-weather-card i {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .text-purple {
+      color: #6f42c1;
+      /* Bootstrap's purple */
+    }
+
+    .weather-card {
+      background: linear-gradient(135deg, #2b2d42, #1a1b2f);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      border-left: 8px solid #00aaff;
+    }
+
+    .weather-card i {
+      color: #ffffffcc;
+    }
+
+    .weather-card strong {
+      font-size: 1rem;
+    }
+
+    .weather-card small {
+      color: #cccccc;
+    }
+
+    .text-muted {
+      color: #aaa !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mb-5 text-center header">
+    <h2 class="font-weight-bold">
+      ☀️ Weather Lookup
+    </h2>
+  </div>
+  <div class="container py-5">
+    <!-- Title -->
+
+
+    <!-- Address Input Section -->
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <h5 class="card-title">
+          <i class="fas fa-map-marker-alt text-secondary"></i> Enter Address
+        </h5>
+        <div class="form-row">
+          <div class="col-md-8 mb-2">
+            <input type="text" id="address" class="form-control"
+              placeholder="Enter address (e.g., 123 Main St, New York, NY)">
+          </div>
+          <div class="col-md-4 mb-2">
+            <div class="d-flex align-items-center">
+              <button class="btn btn-primary mr-2 d-flex align-items-center" id="fetchBtn">
+                <i class="fas fa-sun mr-2"></i> Get Weather
+              </button>
+              <button class="btn btn-outline-secondary d-flex align-items-center" id="saveBtn">
+                <i class="fas fa-save mr-2"></i> Save to DB
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weather Result Section -->
+    <div id="weatherResult" class="mb-4"></div>
+
+    <!-- History Section -->
+    <div class="card shadow-sm mb-4">
+      <div class="card-body text-center">
+        <h5 class="card-title text-left">
+          <i class="fas fa-history text-secondary"></i> Historical Weather Data
+        </h5>
+        <div class="text-muted mb-3">
+          <img src="https://cdn-icons-png.flaticon.com/512/2790/2790806.png" width="60" alt="history-icon" class="mb-2">
+          <p>Click "Load History" to retrieve historical weather data from the database.</p>
+          <button class="btn btn-outline-primary" id="historyBtn">🔄 Load History</button>
+        </div>
+        <div id="history"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- App Logic -->
+  <script src="/main.js"></script>
+</body>
+
+</html>
