@@ -1,0 +1,95 @@
+body {
+    background-color: #f4f8fb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .card {
+    border-radius: 12px;
+    border: none;
+  }
+
+  .weather-icon {
+    width: 60px;
+  }
+
+  #history .history-entry {
+    border-left: 4px solid #007bff;
+    background: #ffffff;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+  }
+
+  #history .history-entry:hover {
+    background-color: #f1f8ff;
+  }
+
+  .header {
+    background: #007bff;
+  }
+
+  .header h2 {
+    color: #f1f8ff;
+    padding: 15px 10px;
+  }
+
+  #fetchBtn,
+  #saveBtn {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+  }
+
+  #fetchBtn i,
+  #saveBtn i {
+    font-size: 1rem;
+  }
+
+  .btn+.btn {
+    margin-left: 8px;
+  }
+
+  .custom-weather-card {
+    background-color: #f9f0ee;
+    border-radius: 16px !important;
+    transition: 0.3s;
+  }
+
+  .custom-weather-card:hover {
+    background-color: #e7f0ff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .custom-weather-card i {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
+  .text-purple {
+    color: #6f42c1;
+    /* Bootstrap's purple */
+  }
+
+  .weather-card {
+    background: linear-gradient(135deg, #2b2d42, #1a1b2f);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-left: 8px solid #00aaff;
+  }
+
+  .weather-card i {
+    color: #ffffffcc;
+  }
+
+  .weather-card strong {
+    font-size: 1rem;
+  }
+
+  .weather-card small {
+    color: #cccccc;
+  }
+
+  .text-muted {
+    color: #aaa !important;
+  }
