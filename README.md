@@ -19,7 +19,9 @@ const dbConfig = {
 };
 
 3. **Import Sqls in your DB**
-Change app_keys or access_token based on service
+a. weather_db_api_keys.sql
+b. weather_db_weather_data.sql
+Change app_keys or access_token based on service in api_keys table
 
 🚀 Run the Application
 node app.js
